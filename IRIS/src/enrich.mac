@@ -1,0 +1,63 @@
+ROUTINE enrich
+	do exec()
+	return
+calcdegree(x1,y1,x2,y2)
+	set rd=($ZPI/180)
+
+	set temp1=$zsin((x2-x1)*rd) if temp1=0 {return ""}
+	set temp2=$zcos(y1*rd) * $ztan(y2*rd)- $zsin(y1*rd)*$zcos((x2-x1)*rd)
+	set degree=90-($zarctan(temp2/temp1)*180/$ZPI)
+    
+	if (x2-x1)>=0 {
+		set degree=90-($zarctan(temp2/temp1)*180/$ZPI)
+	}
+	else {
+		set degree=270-($zarctan(temp2/temp1)*180/$ZPI)
+	}
+	
+	return degree
+    
+test() public {
+    set prevlon=130.56537  
+    set prevlat=31.56496   
+    set curlon=130.56548  
+    set curlat=31.5652   
+    set degree=$$calcdegree(prevlon,prevlat,curlon,curlat)
+    write degree,!
+    return
+}
+test2() public {
+    set prevlon=135.23246 
+    set prevlat=34.88266
+    set curlon=135.23242
+    set curlat=34.88259  
+    set degree=$$calcdegree(prevlon,prevlat,curlon,curlat)
+    write degree,!
+    return
+}
+
+exec() public
+{
+	set prevlon=0 
+    set prevlat=0
+	set prevdegree=180
+	set sql="SELECT ID, lat, lon FROM JavaXEPSample.GPXInput order by ID"
+	set rs=##class(%SQL.Statement).%ExecDirect(,sql)
+	do rs.%Next()
+	set prevlon=rs.lon
+    set prevlat=rs.lat
+
+	while (rs.%Next()) {
+		set curlon=rs.lon
+    	set curlat=rs.lat
+		set id=rs.ID
+		set degree=$$calcdegree(prevlon,prevlat,curlon,curlat)
+		if degree="" { set degree=prevdegree}  //Fill missing value
+		else {Set prevdegree=degree}
+		write degree,!
+		set temprs=##class(%SQL.Statement).%ExecDirect(,"UPDATE JavaXEPSample.GPXInput Set heading=? WHERE ID=?",degree,id)
+		set prevlon=curlon
+		set prevlat=curlat
+		set prevdegree=degree
+	}
+}

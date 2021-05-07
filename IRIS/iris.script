@@ -1,0 +1,21 @@
+//システム設定変更のため %SYSネームスペースに移動
+set $namespace="%SYS"
+// 事前定義ユーザのパスワードを無期限に設定する（デフォルトパスワードはSYS）
+Do ##class(Security.Users).UnExpireUserPasswords("*")
+// 日本語ロケールに変更（コンテナがUbuntu英語版のためデフォルトは英語ロケール）を利用
+Do ##class(Config.NLS.Locales).Install("jpuw")
+
+// REST用パスの作成
+set webName = "/gps"
+set webProperties("DispatchClass") = "GPS.REST"
+set webProperties("NameSpace") = "USER"
+set webProperties("Enabled") = 1
+set webProperties("AutheEnabled") = 96
+set webProperties("MatchRoles")=":%All"
+set status = ##class(Security.Applications).Create(webName, .webProperties)
+
+
+//USERに移動してソースコードインポート
+set $namespace="USER"
+do $system.OBJ.ImportDir("/opt/app/src",,"ck",,1)
+halt

@@ -1,0 +1,132 @@
+<!-- https://www.asobou.co.jp/blog/web/streetview -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>★ StreetViewで確認 ★</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        #street-view {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+ 
+<div id="street-view"></div>
+ 
+<script>
+    const WAIT_SECOND = 1; // 次に移動するまでの秒数
+    //伊良部大橋　24.7948709,125.2518811
+    const START_LAT_LNG = {lat: 24.7948709 ,lng: 125.2518811}; // 開始地点の緯度、経度
+    const START_HEADING =180; // 開始時の方角
+    const json=[];
+    let panorama;
+
+    // IRISのユーザ名とパスワードの準備
+    var username = "_SYSTEM"
+    var password = "SYS"
+    var a64 = btoa(`${username}:${password}`)
+    var url="/gps/latestinfo"
+
+    // GoogleMapApi 読み込み時にcallbackで呼び出される
+    function initMap() {
+        let Links, count = 0, timer_id;
+
+
+        // ストリートビューの表示
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('street-view'), {
+                position: START_LAT_LNG,
+                pov: {
+                    heading: START_HEADING,
+                    pitch: 0
+                },
+                zoom: 1
+            }); // 
+ 
+        // 画面内のリンクを取得
+        Links = panorama.getLinks();
+
+        //RESTで情報取得（情報が取れるまでタイムアウトしない）
+        setTimeout(
+            function () {
+                // RESTで場所を取得
+                fetch(url, {
+                    method: "GET",
+                    headers:{
+                    "Accept":"application/json",
+                    "Authorization" : `Basic ${a64}`
+                    },
+                }).then(function(Response) {
+                    console.log("status=" + Response.status);
+                    return Response.json();
+                }).then(function(json) {
+                    console.log("結果=" +JSON.stringify(json));
+
+                    i=0 //カウンタの初期値
+                    maxcount=json.length  //配列の要素数
+                    //setInterval関数で1秒の遅延
+                    timer = setInterval(function(){
+
+                        //サーバから取得したheading値に最も近いLinkを選択
+                        Links = panorama.getLinks();
+                        let heading = json[i].heading; 
+                        if (heading === null) { 
+                            heading=180; 
+                        }
+                        let val=180;
+                        let currentPov = panorama.getPov();
+                        Links.forEach(function (element, index) {
+                            let ans = Math.abs(heading - element.heading);
+                            if (val > ans) {
+                                val = ans;
+                                target = index;
+                            }
+                        });
+                        // 次に移動するLink先に向きを変える
+                        panorama.setPov({
+                            heading: Links[target].heading,
+                            pitch: 0
+                        });
+                        //console.log("target:"+target+" final heading:"+Links[target].heading+" gap:"+Math.abs(Links[target].heading-heading));
+                        /*
+                        panorama.setPov({
+                            heading: panorama.getPov().heading,
+                            pitch: 0
+                        });
+                        */
+                        panorama.setPosition(json[i]);         
+                        //カウントアップ
+                        i++;
+                        //カウント用変数i が配列の要素数（maxcount）になればsetInterval関数をキャンセル
+                        if(i == maxcount){
+                            //clearInterval関数の繰り返しをキャンセル
+                            clearInterval(timer);
+                        }
+                    }, 1500);
+                    
+                    return;
+
+                }).catch(function(err) {
+                    /* XEPサンプル実行時スキーマ削除を行う為、そのタイミングでRESTを実行するとエラー
+                        エラー時はデフォルトの位置情報を画面に表示させる*/
+                    panorama.setPosition(START_LAT_LNG);
+                    //console.log("err="+err);
+                });                        
+            },
+            WAIT_SECOND * 1000
+        );
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=@@KEY@@"
+        async defer></script>
+</body>
+</html>

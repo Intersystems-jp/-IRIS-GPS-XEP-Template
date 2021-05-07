@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.0" creator="GPSBabel - https://www.gpsbabel.org" xmlns="http://www.topografix.com/GPX/1/0">
+  <time>2021-04-14T05:21:30.163Z</time>
+  <bounds minlat="41.403530000" minlon="2.173280000" maxlat="41.406160000" maxlon="2.177770000"/>
+  <wpt lat="41.405250000" lon="2.177769400">
+    <ele>0.000</ele>
+    <name>Carrer de Mallorca, 439B, 08013 Barcelona, スペイン</name>
+    <cmt>Carrer de Mallorca, 439B, 08013 Barcelona, スペイン</cmt>
+    <desc>Carrer de Mallorca, 439B, 08013 Barcelona, スペイン</desc>
+  </wpt>
+  <wpt lat="41.403534100" lon="2.175481000">
+    <ele>0.000</ele>
+    <name>Carrer de Mallorca, 420, 08013 Barcelona, スペイン</name>
+    <cmt>Carrer de Mallorca, 420, 08013 Barcelona, スペイン</cmt>
+    <desc>Carrer de Mallorca, 420, 08013 Barcelona, スペイン</desc>
+  </wpt>
+  <trk>
+    <name>Carrer de Mallorca, 439B, 08013 Barcelona, スペイン から Carrer de Mallorca, 420, 08013 Barcelona, スペイン へのルート</name>
+    <trkseg>
+      <trkpt lat="41.405250000" lon="2.177770000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405350000" lon="2.177640000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405480000" lon="2.177470000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405870000" lon="2.176970000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.406130000" lon="2.176640000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405290000" lon="2.175550000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405100000" lon="2.175310000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405050000" lon="2.175240000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404670000" lon="2.174710000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404500000" lon="2.174520000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404470000" lon="2.174480000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404580000" lon="2.174340000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404660000" lon="2.174220000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404910000" lon="2.173870000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405160000" lon="2.173520000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405340000" lon="2.173280000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.406100000" lon="2.174330000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.406160000" lon="2.174410000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.406090000" lon="2.174490000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405930000" lon="2.174710000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405420000" lon="2.175380000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405290000" lon="2.175550000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.405160000" lon="2.175720000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404440000" lon="2.176710000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404290000" lon="2.176520000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.404160000" lon="2.176320000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.403780000" lon="2.175810000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.403630000" lon="2.175610000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="41.403530000" lon="2.175480000">
+        <ele>0.000</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

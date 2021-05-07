@@ -1,0 +1,4 @@
+*.swp
+Java/target/*
+Java/.*
+Java/bin

@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>GPS.JavaXEPSample</groupId>
+  <artifactId>gps-xep-template</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>gps-xep-template</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+     <groupId>io.reactivex.rxjava2</groupId>
+     <artifactId>rxjava</artifactId>
+     <version>2.2.21</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams -->
+    <dependency>
+     <groupId>org.reactivestreams</groupId>
+     <artifactId>reactive-streams</artifactId>
+     <version>1.0.3</version>
+    </dependency>
+    <dependency>
+     <groupId>junit</groupId>
+     <artifactId>junit</artifactId>
+     <version>3.8.1</version>
+     <scope>test</scope>
+    </dependency>
+    <!--IRIS用-->
+    <dependency>
+     <groupId>com.intersystems</groupId>
+     <artifactId>intersystems-xep</artifactId>
+     <version>3.2.0</version>
+    </dependency>
+    <dependency>
+     <groupId>com.intersystems</groupId>
+     <artifactId>intersystems-jdbc</artifactId>
+	   <version>3.2.0</version>
+    </dependency>
+   </dependencies>
+ <build>
+	<!-- ここでビルド時にリソースを対象外にする設定を記載する。-->
+  <resources>
+   <resource>
+	  <directory>src/main/java</directory>
+     <!-- jarファイルに含まないリソースはexcludesタグで指定する -->
+    <excludes>
+     <exclude>*</exclude>
+    </excludes>
+   </resource>
+  </resources>     
+  <plugins>
+   <!--コンパイルバージョンの指定-->
+   <plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.6.0</version>
+    <configuration>
+     <source>1.8</source>
+     <target>1.8</target>
+    </configuration>
+   </plugin>
+   <!-- プロジェクトと依存するライブラリをまとめたJarファイルを作成するプラグイン -->
+   <plugin>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <version>3.1.0</version>
+    <configuration>
+      <archive>
+        <manifest>
+          <addClasspath>true</addClasspath>
+          <mainClass>JavaXEPSample.Start</mainClass>
+        </manifest>
+      </archive>    
+      <descriptorRefs>
+      <descriptorRef>jar-with-dependencies</descriptorRef> <!-- この指定が必要 -->
+      </descriptorRefs>
+    </configuration>
+    <executions>
+      <execution>
+      <id>make-assembly</id>
+      <phase>package</phase> <!-- mvn package時実行 -->
+      <goals>
+        <goal>single</goal>
+      </goals>
+      </execution>
+    </executions>
+   </plugin>
+  </plugins>
+ </build>
+</project>

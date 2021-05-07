@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.0" creator="GPSBabel - https://www.gpsbabel.org" xmlns="http://www.topografix.com/GPX/1/0">
+  <time>2021-04-21T07:45:56.578Z</time>
+  <bounds minlat="31.563100000" minlon="130.557548100" maxlat="31.565201500" maxlon="130.565484800"/>
+  <wpt lat="31.563100200" lon="130.557548100">
+    <ele>0.000</ele>
+    <name>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目５ 県道218号</name>
+    <cmt>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目５ 県道218号</cmt>
+    <desc>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目５ 県道218号</desc>
+  </wpt>
+  <wpt lat="31.565201500" lon="130.565484800">
+    <ele>0.000</ele>
+    <name>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目３−１ 鹿児島市民文化ホール 与次郎ヶ浜児童遊園</name>
+    <cmt>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目３−１ 鹿児島市民文化ホール 与次郎ヶ浜児童遊園</cmt>
+    <desc>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目３−１ 鹿児島市民文化ホール 与次郎ヶ浜児童遊園</desc>
+  </wpt>
+  <trk>
+    <name>日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目５ 県道218号 から 日本、〒890-0062 鹿児島県鹿児島市与次郎２丁目３−１ 鹿児島市民文化ホール 与次郎ヶ浜児童遊園 へのルート</name>
+    <trkseg>
+      <trkpt lat="31.563100000" lon="130.557550000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563130000" lon="130.557650000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563170000" lon="130.557790000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563190000" lon="130.557880000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563220000" lon="130.558020000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563240000" lon="130.558200000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563270000" lon="130.558660000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563280000" lon="130.558840000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563310000" lon="130.559200000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563320000" lon="130.559370000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563350000" lon="130.559790000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563360000" lon="130.560000000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563390000" lon="130.560360000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563410000" lon="130.560640000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563440000" lon="130.561060000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563440000" lon="130.561110000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563440000" lon="130.561160000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563500000" lon="130.562000000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563520000" lon="130.562210000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563560000" lon="130.562840000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563600000" lon="130.563370000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563600000" lon="130.563430000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563600000" lon="130.563470000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563610000" lon="130.563600000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563640000" lon="130.563970000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563650000" lon="130.564050000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563660000" lon="130.564130000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563670000" lon="130.564300000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563680000" lon="130.564440000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563680000" lon="130.564470000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563690000" lon="130.564630000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.563690000" lon="130.564760000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.564140000" lon="130.564980000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.564190000" lon="130.565000000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.564760000" lon="130.565270000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.564960000" lon="130.565370000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="31.565200000" lon="130.565480000">
+        <ele>0.000</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.0" creator="GPSBabel - https://www.gpsbabel.org" xmlns="http://www.topografix.com/GPX/1/0">
+  <time>2021-04-30T01:34:02.956Z</time>
+  <bounds minlat="29.975750000" minlon="31.137520000" maxlat="29.975952500" maxlon="31.139920000"/>
+  <wpt lat="29.975764600" lon="31.139915600">
+    <ele>0.000</ele>
+    <name>29 Abou Al Hool Al Seiahi, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト</name>
+    <cmt>29 Abou Al Hool Al Seiahi, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト</cmt>
+    <desc>29 Abou Al Hool Al Seiahi, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト</desc>
+  </wpt>
+  <wpt lat="29.975952500" lon="31.137524400">
+    <ele>0.000</ele>
+    <name>Haret Yeqon, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト</name>
+    <cmt>Haret Yeqon, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト</cmt>
+    <desc>Haret Yeqon, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト</desc>
+  </wpt>
+  <trk>
+    <name>29 Abou Al Hool Al Seiahi, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト から Haret Yeqon, Nazlet El-Semman, Al Haram, Giza Governorate, エジプト へのルート</name>
+    <trkseg>
+      <trkpt lat="29.975760000" lon="31.139920000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975770000" lon="31.139910000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975780000" lon="31.139880000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975790000" lon="31.139820000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975790000" lon="31.139760000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975790000" lon="31.139660000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975780000" lon="31.139520000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975770000" lon="31.139350000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975770000" lon="31.139080000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975750000" lon="31.138560000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975750000" lon="31.138460000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975760000" lon="31.138400000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975770000" lon="31.138330000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975790000" lon="31.138230000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975880000" lon="31.137850000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975940000" lon="31.137580000">
+        <ele>0.000</ele>
+      </trkpt>
+      <trkpt lat="29.975950000" lon="31.137520000">
+        <ele>0.000</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

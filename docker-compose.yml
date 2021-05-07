@@ -1,0 +1,41 @@
+version: '3.7'
+
+networks:
+  isjdctemplate-network:
+    name: isjdctemplate-network
+    driver: bridge
+    ipam:
+      driver: default
+
+services:
+  iris:
+    build:
+      context: ./IRIS
+      dockerfile: Dockerfile
+    image: isjdctemplate:gps-iris
+    init: true
+    hostname: gps-iris
+    container_name: gps-iris
+    ports:
+      # webserver/management portal port
+      - "62774:52773"
+      # superserver default port
+      - "1972:1972"
+    environment:
+      TZ: JST-9
+    networks:
+      - isjdctemplate-network
+
+  # docker-compose run java GPXSamples/Sakurajima.gpx.xml
+  java:
+    build:
+      context: ./Java
+      dockerfile: Dockerfile
+    image: isjdctemplate:gps-java
+    init: true
+    environment:
+      TZ: JST-9
+    volumes:
+      - ./Java/GPXSamples:/usr/projects/GPXSamples
+    networks: 
+      - isjdctemplate-network

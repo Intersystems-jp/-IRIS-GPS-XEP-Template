@@ -1,4 +1,4 @@
-FROM store/intersystems/iris-community:2020.4.0.547.0 as IRIS
+FROM store/intersystems/iris-community:2021.1.0.215.3 as IRIS
 FROM openjdk:8-jdk-alpine
 
 LABEL maintainer="intersystems japan developer community"

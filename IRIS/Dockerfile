@@ -1,5 +1,6 @@
-ARG IMAGE=intersystemsdc/irishealth-community:2020.3.0.200.0-zpm
-ARG IMAGE=store/intersystems/iris-community:2020.4.0.547.0
+#イメージのタグはこちら（https://hub.docker.com/_/intersystems-iris-data-platform）でご確認ください
+ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2021.1.0.215.3
+ARG IMAGE=store/intersystems/iris-community:2021.1.0.215.3
 FROM $IMAGE
 
 USER root

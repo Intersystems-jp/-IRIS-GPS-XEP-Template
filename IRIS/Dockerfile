@@ -1,7 +1,9 @@
 #イメージのタグはこちら（https://hub.docker.com/_/intersystems-iris-data-platform）でご確認ください
 #ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2021.1.0.215.3
 #ARG IMAGE=store/intersystems/iris-community:2021.1.0.215.3
+#ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2022.1.1.374.0
 ARG IMAGE=containers.intersystems.com/intersystems/iris-community:2022.2.0.368.0
+
 FROM $IMAGE
 
 USER root

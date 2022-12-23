@@ -1,4 +1,5 @@
 #FROM store/intersystems/iris-community:2021.1.0.215.3 as IRIS
+#FROM containers.intersystems.com/intersystems/iris-community:2022.1.1.374.0 as IRIS
 FROM containers.intersystems.com/intersystems/iris-community:2022.2.0.368.0 as IRIS
 FROM openjdk:8-jdk-alpine
 
@@ -34,7 +35,7 @@ WORKDIR /irislib
 # mvnローカルリポジトリにサンプルで使用するJarファイルをインストール
 #===============================================================
 # 注意：IRISのバージョンによりJDBC用JARのファイル名が異なります
-# 2022/12/22時点で バージョン2022.2.0.368.0 と 2022.3.0.555.0 は intersystems-jdbc-3.6.1.jar、 2022.1.0.209.0 は intersystems-jdbc-3.3.1.jar
+# 2022/12/22時点で バージョン2022.1.1.374.0／2022.2.0.368.0／2022.3.0.570.0 は intersystems-jdbc-3.6.1.jar、 2022.1.0.209.0 は intersystems-jdbc-3.3.1.jar
 #===============================================================
 COPY --from=IRIS /usr/irissys/dev/java/lib/1.8/*.jar /irislib/
 RUN mvn install:install-file -Dfile=/irislib/intersystems-jdbc-3.6.1.jar \

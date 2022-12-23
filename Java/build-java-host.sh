@@ -7,9 +7,9 @@ rm -rf jar
 # 注意：IRISのバージョンによりJDBC用JARのファイル名が異なります
 # 2022/12/22時点で バージョン2022.2.0.368.0 と 2022.3.0.555.0 は intersystems-jdbc-3.6.1.jar、 2022.1.0.209.0 は intersystems-jdbc-3.3.1.jar
 #===============================================================
-wget -P jar https://github.com/intersystems-community/iris-driver-distribution/raw/main/JDK18/intersystems-jdbc-3.3.1.jar
+wget -P jar https://github.com/iijimam/IRISModules/tree/master/java/intersystems-jdbc-3.6.1.jar
 # iris xep
-wget -P jar https://github.com/intersystems-community/iris-driver-distribution/raw/main/JDK18/intersystems-xep-3.2.1.jar
+wget -P jar https://github.com/iijimam/IRISModules/tree/master/java/intersystems-xep-3.2.1.jar
 
 # IRIS用jarをmavenローカルリポジトリへのインストール
 # iris jdbc
@@ -17,10 +17,10 @@ echo "---------------------------------------------"
 echo "IRIS JDBC用JARをローカルリポジトリへインストール"
 echo "---------------------------------------------"
 mvn install:install-file \
--Dfile=${PWD}/jar/intersystems-jdbc-3.3.1.jar \
+-Dfile=${PWD}/jar/intersystems-jdbc-3.6.1.jar \
 -DgroupId=com.intersystems \
 -DartifactId=intersystems-jdbc \
--Dversion=3.3.1 \
+-Dversion=3.6.1 \
 -Dpackaging=jar \
 -DgeneratePom=true
 

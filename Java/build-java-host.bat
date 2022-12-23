@@ -1,12 +1,12 @@
 @echo off
-bitsadmin /transfer myDownloadJob /download /priority normal https://github.com/intersystems-community/iris-driver-distribution/raw/main/JDK18/intersystems-jdbc-3.3.1.jar %CD%/jar/intersystems-jdbc-3.3.1.jar
-bitsadmin /transfer myDownloadJob /download /priority normal https://github.com/intersystems-community/iris-driver-distribution/raw/main/JDK18/intersystems-xep-3.2.1.jar %CD%/jar/intersystems-xep-3.2.1.jar
+bitsadmin /transfer myDownloadJob /download /priority normal https://github.com/iijimam/IRISModules/tree/master/java/intersystems-jdbc-3.6.1.jar %CD%/jar/intersystems-jdbc-3.6.1.jar
+bitsadmin /transfer myDownloadJob /download /priority normal https://github.com/iijimam/IRISModules/tree/master/java/intersystems-xep-3.2.1.jar %CD%/jar/intersystems-xep-3.2.1.jar
 
 
 echo -------------------------------------------------------
 echo ** install IRIS jdbc jar files to maven local repogitory
 echo -------------------------------------------------------
-call mvn install:install-file -Dfile=jar/intersystems-jdbc-3.3.1.jar -DgroupId=com.intersystems -DartifactId=intersystems-jdbc -Dversion=3.3.1 -Dpackaging=jar -DgeneratePom=true
+call mvn install:install-file -Dfile=jar/intersystems-jdbc-3.6.1.jar -DgroupId=com.intersystems -DartifactId=intersystems-jdbc -Dversion=3.6.1 -Dpackaging=jar -DgeneratePom=true
 
 echo -------------------------------------------------------
 echo ** install IRIS xep files to maven local repogitory

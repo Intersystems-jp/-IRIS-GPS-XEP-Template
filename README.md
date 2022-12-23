@@ -94,9 +94,15 @@ APIキーを入手されたら、コンテナビルド前に [apikey.txt](./IRIS
 
 1) コンテナをビルドする方法
 
+    ```
+    docker-compose build
+    ```
+    ※ IRIS のイメージのダウンロードや Java 実行環境の作成を行うため、少し時間がかかります。
+
+    【メモ】
     このサンプルで使用しているIRISのイメージは、[コンテナレジストリ](https://containers.intersystems.com/contents)からPullしています。
     
-    コンテナレジストリから初めてPullする場合は、実行前に `docker login` を行ってください。
+    操作される環境で初めてPullする場合は、実行前に `docker login` を行ってください。
 
     ```
     docker login -u="ユーザ名" -p="パスワード" containers.intersystems.com
@@ -104,11 +110,6 @@ APIキーを入手されたら、コンテナビルド前に [apikey.txt](./IRIS
     
     詳細な手順はコミュニティの記事：[InterSystems Container Registryのご紹介](https://jp.community.intersystems.com/node/496571) の「ICRへの認証」をご覧ください。
 
-
-    ```
-    docker-compose build
-    ```
-    ※ IRIS のイメージのダウンロードや Java 実行環境の作成を行うため、少し時間がかかります。
 2) コンテナを開始する方法
 
     ```
